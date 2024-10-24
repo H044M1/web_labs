@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Антон | Визитная карточка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="images/photo.jfif" alt="Фото Антона" class="profile-photo">
+            <div class="profile-info">
+                <h1>Антон</h1>
+                <p class="lang" data-ru="Студент 3 курса НГТУ" data-en="3rd year student at NSTU">Студент 3 курса НГТУ</p>
+                <p class="lang" data-ru="Факультет прикладной математики и информатики" data-en="Faculty of Applied Mathematics and Informatics">Факультет прикладной математики и информатики</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#about" class="lang" data-ru="Обо мне" data-en="About">Обо мне</a>
+            <a href="#education" class="lang" data-ru="Образование" data-en="Education">Образование</a>
+            <a href="#skills" class="lang" data-ru="Навыки" data-en="Skills">Навыки</a>
+            <a href="#experience" class="lang" data-ru="Опыт работы" data-en="Experience">Опыт работы</a>
+            <button id="lang-switcher">EN</button>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h2 class="lang" data-ru="Обо мне" data-en="About me">Обо мне</h2>
+        <p class="lang" data-ru="Мне 19 лет. Родился и вырос в Новосибирске, Учусь на третьем курсе Новосибирского государственного технического университета, на факультете прикладной математики и информатики. Изучаю программирование.В разные пеоды своей жизни занимался 3D моделированием, обработкой фотографий и монтажем видео, немного касался разработки игр, собирал и улучшал компьютеры. Некоторое время работал консультантом по продукту в магазине LIME, что дало мне некоторый опыт в сфере продаж."
+           data-en="I'm 19 years old. Born and raised in Novosibirsk, I am a third-year student at Novosibirsk State Technical University, at the Faculty of Applied Mathematics and Computer Science. I study programming.At various points in his life, he was engaged in 3D modeling, photo processing and video editing, touched a little on game development, assembled and improved computers. I worked for a while as a product consultant at a LIME store, which gave me some sales experience..">
+           Мне 19 лет. Родился и вырос в Новосибирске, Учусь на третьем курсе Новосибирского государственного технического университета, на факультете прикладной математики и информатики. Изучаю программирование.В разные пеоды своей жизни занимался 3D моделированием, обработкой фотографий и монтажем видео, немного касался разработки игр, собирал и улучшал компьютеры. Некоторое время работал консультантом по продукту в магазине LIME, что дало мне некоторый опыт в сфере продаж.
+        </p>
+    </section>
+
+    <section id="education" class="education">
+        <h2 class="lang" data-ru="Образование" data-en="Education">Образование</h2>
+        <ul>
+            <li class="lang" data-ru="Университет: Новосибирский государственный технический университет" data-en="University: Novosibirsk State Technical University">Университет: Новосибирский государственный технический университет</li>
+            <li class="lang" data-ru="Направление: Математическое обеспечение и администрирование информационных систем" data-en="Field: Mathematical Support and Administration of Information Systems">Направление: Математическое обеспечение и администрирование информационных систем</li>
+            <li class="lang" data-ru="Профиль: Системы искусственного интеллекта" data-en="Specialization: AI Systems">Профиль: Системы искусственного интеллекта</li>
+            <li class="lang" data-ru="Курс: 3" data-en="Year: 3">Курс: 3</li>
+        </ul>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2 class="lang" data-ru="Опыт работы" data-en="Experience">Опыт работы</h2>
+        <div class="job">
+            <h3 class="lang" data-ru="Продавец-консультант" data-en="Sales Consultant">Продавец-консультант</h3>
+            <p><strong class="lang" data-ru="Компания" data-en="Company">Компания</strong>: LIME</p>
+            <p class="lang" data-ru="Период работы: Февраль 2024 — Октябрь 2024" data-en="Work Period: February 2024 — October 2024">Период работы: Февраль 2024 — Октябрь 2024</p>
+            <p class="lang" data-ru="Обязанности:" data-en="Responsibilities:">Обязанности:</p>
+            <ul>
+                <li class="lang" data-ru="Консультация клиентов по ассортименту товаров и услуг." data-en="Consulting clients on product range and services.">Консультация клиентов по ассортименту товаров и услуг.</li>
+                <li class="lang" data-ru="Работа с возражениями и подбор оптимальных предложений для покупателей." data-en="Handling objections and selecting optimal offers for customers.">Работа с возражениями и подбор оптимальных предложений для покупателей.</li>
+                <li class="lang" data-ru="Поддержание высокого уровня сервиса и выполнение планов продаж." data-en="Maintaining high service standards and meeting sales targets.">Поддержание высокого уровня сервиса и выполнение планов продаж.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="comments" class="comments">
+        <h2 class="lang" data-ru="Комментарии" data-en="Comments">Комментарии</h2>
+        <div class="comment-form">
+            <input type="text" id="name" placeholder="Ваше имя" required>
+            <textarea id="comment" placeholder="Ваш комментарий" required></textarea>
+            <button id="submit-comment">Оставить комментарий</button>
+        </div>
+        <div id="comment-list"></div>
+    </section>
+    
+    
+
+    <footer>
+        <p class="lang" data-ru="Контакты:" data-en="Contacts:">Контакты:</p>
+        <a href="mailto:antondolganev54@gmail.com">antondolganev54@gmail.com</a>
+        <p class="lang" data-ru="Github:" data-en="Github:">Github:</p>
+        <a href="https://github.com/H044M1">https://github.com/H044M1</a>
+        <p>&copy; 2024 Антон Долганёв</p>
+    </footer>
+
+
+    <button class="scroll-to-top" onclick="scrollToTop()">&#8679;</button>
+
+    <script src="script.js"></script>
+
+    <script>
+        const langSwitcher = document.getElementById('lang-switcher');
+        langSwitcher.addEventListener('click', () => {
+            const elements = document.querySelectorAll('.lang');
+            const currentLang = langSwitcher.innerText;
+            const newLang = currentLang === 'EN' ? 'RU' : 'EN';
+            elements.forEach(element => {
+                element.innerText = element.getAttribute(`data-${newLang.toLowerCase()}`);
+            });
+            langSwitcher.innerText = currentLang === 'EN' ? 'RU' : 'EN';
+        });
+
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = 'flex';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
