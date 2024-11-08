@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Антон | Визитная карточка</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
 </head>
 <body>
     <header>
         <div class="profile">
-            <img src="images/photo.jfif" alt="Фото Антона" class="profile-photo">
+            <img src="{{ url_for('static', filename='images/photo.jfif') }}" alt="Фото Антона" class="profile-photo">
             <div class="profile-info">
                 <h1>Антон</h1>
                 <p class="lang" data-ru="Студент 3 курса НГТУ" data-en="3rd year student at NSTU">Студент 3 курса НГТУ</p>
@@ -27,9 +28,9 @@
 
     <section id="about" class="about">
         <h2 class="lang" data-ru="Обо мне" data-en="About me">Обо мне</h2>
-        <p class="lang" data-ru="Мне 19 лет. Родился и вырос в Новосибирске, Учусь на третьем курсе Новосибирского государственного технического университета, на факультете прикладной математики и информатики. Изучаю программирование.В разные пеоды своей жизни занимался 3D моделированием, обработкой фотографий и монтажем видео, немного касался разработки игр, собирал и улучшал компьютеры. Некоторое время работал консультантом по продукту в магазине LIME, что дало мне некоторый опыт в сфере продаж."
-           data-en="I'm 19 years old. Born and raised in Novosibirsk, I am a third-year student at Novosibirsk State Technical University, at the Faculty of Applied Mathematics and Computer Science. I study programming.At various points in his life, he was engaged in 3D modeling, photo processing and video editing, touched a little on game development, assembled and improved computers. I worked for a while as a product consultant at a LIME store, which gave me some sales experience..">
-           Мне 19 лет. Родился и вырос в Новосибирске, Учусь на третьем курсе Новосибирского государственного технического университета, на факультете прикладной математики и информатики. Изучаю программирование.В разные пеоды своей жизни занимался 3D моделированием, обработкой фотографий и монтажем видео, немного касался разработки игр, собирал и улучшал компьютеры. Некоторое время работал консультантом по продукту в магазине LIME, что дало мне некоторый опыт в сфере продаж.
+        <p class="lang" data-ru="Мне 20 лет. Родился и вырос в Новосибирске, Учусь на третьем курсе Новосибирского государственного технического университета, на факультете прикладной математики и информатики. Изучаю программирование.В разные пеоды своей жизни занимался 3D моделированием, обработкой фотографий и монтажем видео, немного касался разработки игр, собирал и улучшал компьютеры. Некоторое время работал консультантом по продукту в магазине LIME, что дало мне некоторый опыт в сфере продаж."
+           data-en="I'm 20 years old. Born and raised in Novosibirsk, I am a third-year student at Novosibirsk State Technical University, at the Faculty of Applied Mathematics and Computer Science. I study programming.At various points in his life, he was engaged in 3D modeling, photo processing and video editing, touched a little on game development, assembled and improved computers. I worked for a while as a product consultant at a LIME store, which gave me some sales experience..">
+           Мне 20 лет. Родился и вырос в Новосибирске, Учусь на третьем курсе Новосибирского государственного технического университета, на факультете прикладной математики и информатики. Изучаю программирование.В разные пеоды своей жизни занимался 3D моделированием, обработкой фотографий и монтажем видео, немного касался разработки игр, собирал и улучшал компьютеры. Некоторое время работал консультантом по продукту в магазине LIME, что дало мне некоторый опыт в сфере продаж.
         </p>
     </section>
 
@@ -59,14 +60,15 @@
     </section>
 
 
-    <section id="comments" class="comments">
-        <h2 class="lang" data-ru="Комментарии" data-en="Comments">Комментарии</h2>
-        <div class="comment-form">
-            <input type="text" id="name" placeholder="Ваше имя" required>
-            <textarea id="comment" placeholder="Ваш комментарий" required></textarea>
-            <button id="submit-comment">Оставить комментарий</button>
+    <section class="comments-section">
+        <h2>Комментарии</h2>
+        <div id="comment-form">
+            <textarea id="commentText" placeholder="Введите ваш комментарий"></textarea>
+            <textarea id="commentNickName" placeholder="Введите ваш ник"></textarea>
+            <button onclick="addComment()">Добавить комментарий</button>
         </div>
-        <div id="comment-list"></div>
+        <div id="comments-container">
+        </div>
     </section>
     
     
@@ -81,8 +83,6 @@
 
 
     <button class="scroll-to-top" onclick="scrollToTop()">&#8679;</button>
-
-    <script src="script.js"></script>
 
     <script>
         const langSwitcher = document.getElementById('lang-switcher');
@@ -109,5 +109,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 </html>

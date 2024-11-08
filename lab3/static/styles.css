@@ -97,17 +97,61 @@ li:hover {
     margin-bottom: 20px;
 }
 
-.comments {
-    margin: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.comments-section {
+    background: #fff; 
+    margin: 20px; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    animation: fadeInUp 1s ease-in-out; 
 }
 
-.comment-form {
-    margin-bottom: 20px;
+.comments-section h2 {
+    color: #333; 
+    border-bottom: 2px solid #4CAF50; 
+    padding-bottom: 10px; 
+    margin-bottom: 10px; 
 }
+
+#comment-form {
+    margin-bottom: 20px; 
+}
+
+#commentText, #commentNickName {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;  
+    border-radius: 5px; 
+}
+
+#comment-form button {
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background 0.3s; 
+}
+
+#comment-form button:hover {
+    background-color: #45a049; 
+}
+
+#comments-container {
+    margin-top: 20px; 
+}
+
+.comment {
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #e8e8e8; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
 
 #name, #comment {
     width: 100%;
